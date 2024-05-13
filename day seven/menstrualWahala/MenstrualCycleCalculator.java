@@ -9,32 +9,30 @@ public class MenstrualCycleCalculator{
 
 		Scanner scanner = new Scanner(System.in);
 
-		LocalDate currentDate = LocalDate.now();
+		//LocalDate currentDate = LocalDate.now();
 	
 		System.out.println("WELCOME TO THE MENSTRUAL CYCLE CALCULATOR");
 	
 		System.out.println("Assumed Length Of Cycle Is Between 21 - 35 Days");
+		
+		System.out.print("Enter The Date Of Your Last Menstrual Flow: ");	
 
-		System.out.print("Enter The Average Length Of Your Cycle: ");
+		String lastFlowDate = scanner.nextLine();
 
-		String cycleLength = scanner.nextLine();
+		LocalDate lastFlowDate = LocalDate.parse(lastFlowDate, DateTimeFormatter );
 
-		System.out.print("Enter The Duration Of Menstrual Flow In Days: ");
+		System.out.print("Enter The Average Length Of Your Cycle In Days: ");
 
-		String flowDuration = scanner.nextLine();
+		int cycleLength = scanner.nextInt();
 
-		System.out.print("Enter The First Day Of Current Menstrual Cycle: ");
+		LocalDate nextMenstrualFlow = lastFlowDate.plusDays(cycleLength);
 
-		String startDate = scanner.nextLine();
+		//System.out.print("Enter The Duration Of Menstrual Flow In Days: ");
 
-		DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy");
+		//String flowDuration = scanner.nextLine();
 
-		LocalDate startDate = LocalDate.parse(startDate, formatter);
 
-		String nextPeriodDate = startDate + cycleLength;
-
-		System.out.print("The Start Of The Next Period Is In " + nextPeriodDate + "Days" );
-
+		
 	
 
 
