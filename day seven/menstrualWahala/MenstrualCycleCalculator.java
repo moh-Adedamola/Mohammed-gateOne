@@ -27,6 +27,10 @@ public class MenstrualCycleCalculator{
 
 		String startDate = scanner.nextLine();
 
+		DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy");
+
+		LocalDate startDate = LocalDate.parse(startDate, formatter);
+
 		String nextPeriodDate = startDate + cycleLength;
 
 		System.out.print("The Start Of The Next Period Is In " + nextPeriodDate + "Days" );
