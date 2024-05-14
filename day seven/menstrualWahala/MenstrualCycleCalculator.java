@@ -26,11 +26,22 @@ public class MenstrualCycleCalculator{
 		
 		LocalDate nextMenstrualFlow = actualDate.plusDays(cycleLength);
 
-		System.out.print("The Next Menstrual Flow: " + nextMenstrualFlow);
+		System.out.print("Your Next Menstrual Flow Starts On: " + nextMenstrualFlow);
 
-		LocalDate ovulationDate = actualDate.plusDays(cycleLength / 2);
+		LocalDate ovulationDate = nextMenstrualFlow.minusDays(14);
 
-		System.out.print("\nYour Ovulation Date Is Between : " + ovulationDate.minusDays(2) + " - " + ovulationDate.plusDays(2));
+		System.out.print("\nYour Ovulation Date Is: " + ovulationDate+"\n");
+
+		LocalDate fertilePeriodStart = ovulationDate.minusDays(7);
+
+        	LocalDate fertilePeriodEnd = ovulationDate.plusDays(2);
+
+		System.out.print("Your Fertile Period Is Between : " + ovulationDate.minusDays(7) + " - " + ovulationDate.plusDays(2) +"\n");
+
+		System.out.println("YOUR SAFE PERIOD ARE ANY DAYS THAT DO NOT FALL UNDER THE FERTILE WINDOW!!");
+
+
+		
 
 		
 
