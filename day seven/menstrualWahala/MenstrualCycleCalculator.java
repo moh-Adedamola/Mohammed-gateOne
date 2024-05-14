@@ -41,22 +41,6 @@ public class MenstrualCycleCalculator{
 		System.out.println("YOUR SAFE PERIOD ARE ANY DAYS THAT DO NOT FALL UNDER THE FERTILE WINDOW!!");
 
 
-		
-
-		
-
-		
-
-
-
-
 	}
-
-
-
-
-
-
-
 
 }
