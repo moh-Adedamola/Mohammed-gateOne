@@ -30,7 +30,11 @@ public class MenstrualCycleCalculator{
 
 		LocalDate ovulationDate = actualDate.plusDays(cycleLength / 2);
 
-		System.out.print("\nYour Ovulation Date Is: " + ovulationDate);
+		System.out.print("\nYour Ovulation Date Is Between : " + ovulationDate.minusDays(2) + " - " + ovulationDate.plusDays(2));
+
+		
+
+		
 
 
 
