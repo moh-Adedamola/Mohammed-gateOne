@@ -38,11 +38,11 @@ public class MenstrualCycleCalculator{
 
 		System.out.print("Your Fertile Period Is Between : " + ovulationDate.minusDays(7) + " - " + ovulationDate.plusDays(2) +"\n");
 
-		LocalDate safePeriodStart = ovulationDate.minusDays(5);
+		LocalDate safePeriodStart = ovulationDate.plusDays(5);
 
-		LocalDate safePeriodEnd = nextMenstrualFlow.plusDays(5);
+		LocalDate safePeriodEnd = nextMenstrualFlow.minusDays(5);
 
-		System.out.println("Your Safe Period Is Between: " + ovulationDate.minusDays(5) + " - " + nextMenstrualFlow.plusDays(5) );
+		System.out.println("Your Safe Period Is Between: " + ovulationDate.plusDays(5) + " - " + nextMenstrualFlow.minusDays(5) );
 
 
 	}
