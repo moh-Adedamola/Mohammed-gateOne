@@ -9,18 +9,26 @@ public class AtmApp{
 	Scanner scanner = new Scanner(System.in);
 	boolean condition = true;
 	while(condition){
-		System.out.println("============================");
 		System.out.println("WELCOME TO BANKE ATM");
+
 		System.out.println("WHAT WOULD YOU LIKE TO DO");
+
 		System.out.println("1. Create Account");
+
 		System.out.println("2. Deposit");
+
 		System.out.println("3. Withdraw");
+
 		System.out.println("4. Check Balance");
+
 		System.out.println("5. Transfer");
+
 		System.out.println("6. Change pin");
+
 		System.out.println("7. Close Account");
+
 		System.out.println("8. ExitApp");
-		System.out.println("============================");
+		
 
 		String response = scanner.nextLine();
 		
@@ -30,8 +38,8 @@ public class AtmApp{
 			case "2": deposit();
 				  break;
 			//case "3": withdraw();
-			case "4": checkBalance();
-				  break;
+			//case "4": checkBalance();
+				    
 			//case "5": transfer();
 			//case "6": changePin();	
 			//case "7": closeAccount();
@@ -63,20 +71,7 @@ public class AtmApp{
 		System.out.println("You account number is " + accountNumber);
 	}
 	
-	public static void checkBalance(){
-		Scanner scanner = new Scanner(System.in);
-		System.out.print("Enter account number: ");
-		int number = scanner.nextInt();
-		scanner.nextLine();		
-
-		System.out.print("Enter pin: ");
-		String pin = scanner.nextLine();
-		for (int count = 0; count < customers.size(); count++){
-			if (customers.get(count).getAccountNumber() == number && customers.get(count).getPin().equals(pin)){
-				System.out.println("You account balance is " + customers.get(count).getBalance());
-			}
-		}
-	}
+	
 	
 	public static void deposit(){
 		Scanner scanner = new Scanner(System.in);
@@ -88,7 +83,7 @@ public class AtmApp{
 		for (int count = 0; count < customers.size(); count++){
 			if (customers.get(count).getAccountNumber() == number){
 				customers.get(count).deposit(amount);
-				System.out.println(amount + " deposit successfully");
+				System.out.println(amount + " deposited successfully");
 			}
 		}
 	}	
