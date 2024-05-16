@@ -10,6 +10,7 @@ public class Customer{
 		this.firstName = firstName;
 		this.lastName = lastName;
 		this.pin = pin;
+		this.accountNumber = accountNumber;
 	}
 	
 	public void setFirstName(String firstName){	
@@ -45,9 +46,13 @@ public class Customer{
 	}
 
 	public int getAccountNumber(){
-		return this.accountNumber();
+		return this.accountNumber;
 	}
 	
-	
+	public void deposit(double amount){
+		if (amount > 0){
+			this.balance += amount;	
+		}
+	}	
 
 }
