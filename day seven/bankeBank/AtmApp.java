@@ -86,6 +86,21 @@ public class AtmApp{
 				System.out.println(amount + " deposited successfully");
 			}
 		}
+	}
+
+	public static void checkBalance(){
+		Scanner scanner = new Scanner(System.in);
+		System.out.print("Enter account number: ");
+		int number = scanner.nextInt();
+		scanner.nextLine();		
+
+		System.out.print("Enter pin: ");
+		String pin = scanner.nextLine();
+		for (int count = 0; count < customers.size(); count++){
+			if (customers.get(count).getAccountNumber() == number && customers.get(count).getPin() == pin){
+				System.out.println("You account balance is " + customers.get(count).getBalance());
+			}
+		}
 	}	
 	
 }
