@@ -1,4 +1,4 @@
-public class Customer{
+public class CustomerDetails{
 	
 	private String firstName;
 	private String lastName;
@@ -6,11 +6,12 @@ public class Customer{
 	private int accountNumber;
 	private double balance;
 
-	public Customer(String firstName, String lastName, String pin, int accountNumber){
+	public CustomerDetails(String firstName, String lastName, String pin, int accountNumber){
 		this.firstName = firstName;
 		this.lastName = lastName;
 		this.pin = pin;
 		this.accountNumber = accountNumber;
+		
 	}
 	
 	public void setFirstName(String firstName){	
@@ -53,6 +54,14 @@ public class Customer{
 		if (amount > 0){
 			this.balance += amount;	
 		}
-	}	
+	}
+
+	public void withdraw(double amount){
+		if (balance >= amount){
+			this.balance = balance - amount;
+	
+		}
+
+	}		
 
 }
