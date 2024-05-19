@@ -16,7 +16,7 @@ public class MenstrualCycleCalculator{
 
 		System.out.println();
 		
-		System.out.print("Enter The Date Of Your Last Menstrual Flow (DD-MM-YYYY): ");	
+		System.out.print("Enter The Date Of Your Last Menstrual Flow : ");	
 
 		String lastFlowDate = scanner.nextLine();
 
@@ -32,7 +32,7 @@ public class MenstrualCycleCalculator{
 
 		System.out.print("Your Next Menstrual Flow Starts On: " + nextMenstrualFlow);
 
-		LocalDate ovulationDate = nextMenstrualFlow.minusDays(14);
+		LocalDate ovulationDate = lastFlowDatePeriod.plusDays(cycleLength / 2);
 
 		System.out.print("\nYour Ovulation Date Is: " + ovulationDate + "\n");
 

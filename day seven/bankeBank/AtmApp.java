@@ -38,7 +38,7 @@ public class AtmApp{
 			case "2": deposit();
 				  break;
 			//case "3": withdraw();
-			//case "4": checkBalance();
+			case "4": checkBalance();
 				    
 			//case "5": transfer();
 			//case "6": changePin();	
